@@ -142,4 +142,5 @@ def generate_headline_subject_response(email_content, target_audience, tone_of_v
         ),
         contents=content
     )
-    print(response.text)
+
+    return response.text
