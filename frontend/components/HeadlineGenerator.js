@@ -127,7 +127,17 @@ export function HeadlineGenerator() {
         <div id="loader-section" class="max-w-2xl mx-auto hidden">
           <div class="card bg-base-100 shadow-2xl">
             <div class="card-body p-12 text-center">
-              <div class="loading-spinner mx-auto mb-8"></div>
+              <!-- loder -->
+              <div class="flex-col gap-4 w-full flex items-center justify-center">
+                <div
+                  class="w-20 h-20 border-4 border-transparent text-blue-400 text-4xl animate-spin flex items-center justify-center border-t-blue-400 rounded-full"
+                >
+                  <div
+                    class="w-16 h-16 border-4 border-transparent text-red-400 text-2xl animate-spin flex items-center justify-center border-t-red-400 rounded-full"
+                  ></div>
+                </div>
+              </div>
+
               <h2 class="text-3xl font-bold text-base-content mb-4">Bear with me for a minute...</h2>
               <p class="text-lg text-base-content/70 leading-relaxed">I'm not a normal AI, and I focus on results and it will be valuable for you, so I take time to think!</p>
             </div>

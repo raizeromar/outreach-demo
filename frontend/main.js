@@ -197,7 +197,8 @@ class App {
       })
 
       const result = await response.json()
-      this.showResult(result)
+      this.showResult(result.result)
+
     } catch (error) {
       this.showError('AI processing failed. Please try again.')
     }
@@ -233,7 +234,10 @@ class App {
 
     loaderSection.classList.add('hidden')
 
-    const safeHTML = DOMPurify.sanitize(marked.parse(result))
+    // Guard: if result is object, try to extract string
+    const markdown = typeof result === 'string' ? result : result?.result || '⚠️ Invalid response format'
+
+    const safeHTML = DOMPurify.sanitize(marked.parse(markdown))
 
     resultSection.innerHTML = `
       <div class="card bg-base-100 shadow-2xl">
