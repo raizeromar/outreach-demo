@@ -246,7 +246,7 @@ class App {
             <h2 class="text-4xl font-bold text-base-content mb-4">Your Hormozi-Style Headlines & Subjects</h2>
             <div class="badge badge-success badge-lg">Generated Successfully!</div>
           </div>
-          <div class="bg-base-200 rounded-lg p-6 mb-8 prose prose-sm max-w-none dark:prose-invert">
+          <div class="bg-base-200 rounded-lg p-6 mb-8 text-lg leading-relaxed">
             ${safeHTML}
           </div>
           <div class="text-center">

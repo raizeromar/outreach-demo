@@ -128,7 +128,7 @@ export function HeadlineGenerator() {
           <div class="card bg-base-100 shadow-2xl">
             <div class="card-body p-12 text-center">
               <!-- loder -->
-              <div class="flex-col gap-4 w-full flex items-center justify-center">
+              <div class="flex-col gap-4 w-full flex items-center justify-center pb-4">
                 <div
                   class="w-20 h-20 border-4 border-transparent text-blue-400 text-4xl animate-spin flex items-center justify-center border-t-blue-400 rounded-full"
                 >
