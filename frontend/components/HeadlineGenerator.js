@@ -24,7 +24,7 @@ export function HeadlineGenerator() {
                   <label class="label">
                     <span class="label-text font-semibold">Full Name</span>
                   </label>
-                  <input type="text" id="name" name="name" class="input input-bordered input-lg" required>
+                  <input type="text" id="name" name="name" class="input input-bordered input-lg" placeholder="Your Full Name" required>
                   <div id="name-error" class="label hidden">
                     <span class="label-text-alt text-error"></span>
                   </div>
@@ -44,12 +44,12 @@ export function HeadlineGenerator() {
                   <label class="label">
                     <span class="label-text font-semibold">Business Email</span>
                   </label>
-                  <input type="email" id="email" name="email" class="input input-bordered input-lg" required>
+                  <input type="email" id="email" name="email" class="input input-bordered input-lg"  placeholder="Your Business Email" required>
                   <div id="email-error" class="label hidden">
                     <span class="label-text-alt text-error"></span>
                   </div>
                   <div class="label">
-                    <span class="label-text-alt text-base-content/60">Gmail addresses are not accepted for business use</span>
+                    <span class="label-text-alt text-base-content/60">Gmail/Outlook addresses are not accepted for business use</span>
                   </div>
                 </div>
                 
@@ -139,7 +139,7 @@ export function HeadlineGenerator() {
               </div>
 
               <h2 class="text-3xl font-bold text-base-content mb-4">Bear with me for a minute...</h2>
-              <p class="text-lg text-base-content/70 leading-relaxed">I'm not a normal AI, and I focus on results and it will be valuable for you, so I take time to think!</p>
+              <p class="text-lg text-base-content/70 leading-relaxed">I'm not a normal AI, and I focus on results and it will be valuable for you, so I will take time to think ;)</p>
             </div>
           </div>
         </div>

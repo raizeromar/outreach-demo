@@ -65,10 +65,28 @@ class App {
   }
 
   validateBusinessEmail(email) {
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-    const isValidFormat = emailPattern.test(email)
-    const isGmail = email.toLowerCase().includes('@gmail.com')
-    return isValidFormat && !isGmail
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const isValidFormat = emailPattern.test(email);
+    
+    if (!isValidFormat) return false;
+    
+    // List of personal email domains to exclude
+    const personalDomains = [
+        'gmail.com',
+        'outlook.com',
+        'hotmail.com',
+        'yahoo.com',
+        'ymail.com',
+        'protonmail.com',
+        'icloud.com',
+        'mail.com',
+        'example.com',
+        'aol.com',
+        'duck.com'
+    ];
+    
+    const domain = email.split('@')[1].toLowerCase();
+    return !personalDomains.includes(domain);
   }
 
   showFieldError(fieldId, message) {
@@ -114,12 +132,31 @@ class App {
     }
 
     if (!email || !this.validateBusinessEmail(email)) {
-      if (email && email.toLowerCase().includes('@gmail.com')) {
-        this.showFieldError('email', 'Gmail addresses are not accepted. Please use your business email.')
+      if (email) {
+          const domain = email.split('@')[1]?.toLowerCase();
+          const personalDomains = [
+            'gmail.com',
+            'outlook.com',
+            'hotmail.com',
+            'yahoo.com',
+            'ymail.com',
+            'protonmail.com',
+            'icloud.com',
+            'mail.com',
+            'example.com',
+            'aol.com',
+            'duck.com'
+          ];
+          
+          if (domain && personalDomains.includes(domain)) {
+              this.showFieldError('email', `Email addresses from ${domain} are not accepted. Please use your business email.`);
+          } else {
+              this.showFieldError('email', 'Please enter a valid business email address');
+          }
       } else {
-        this.showFieldError('email', 'Please enter a valid business email address')
+          this.showFieldError('email', 'Please enter a valid business email address');
       }
-      isValid = false
+      isValid = false;
     }
 
     return isValid
