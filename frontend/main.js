@@ -235,13 +235,13 @@ class App {
     loaderSection.classList.add('hidden')
 
     // Guard: if result is object, try to extract string
-    const markdown = typeof result === 'string' ? result : result?.result || '⚠️ Invalid response format'
+    const originalMarkdown = typeof result === 'string' ? result : result?.result || '⚠️ Invalid response format'
 
     // Transform the markdown to add newlines and bullet points
-    markdown = markdown.replace(/(Pair \d+) (Subject: )?(.*?) (Headline: )?(.*?)(\n|$)/g, 
+    const transformedMarkdown = originalMarkdown.replace(/(Pair \d+) (Subject: )?(.*?) (Headline: )?(.*?)(\n|$)/g, 
         "$1\n- Subject:\n$3\n- Headline:\n$5\n")
 
-    const safeHTML = DOMPurify.sanitize(marked.parse(markdown))
+    const safeHTML = DOMPurify.sanitize(marked.parse(transformedMarkdown))
 
     resultSection.innerHTML = `
       <div class="card bg-base-100 shadow-2xl">
