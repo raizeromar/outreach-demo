@@ -1,4 +1,5 @@
 import './style.css'
+import './fonts.css';
 import { LandingPage } from './components/LandingPage.js'
 import { HeadlineGenerator } from './components/HeadlineGenerator.js'
 
