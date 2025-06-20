@@ -95,3 +95,17 @@
         .animate-slide-up {
             animation: slideInUp 0.6s ease-out;
         }
+
+
+        .third-hero-btn {
+            background: linear-gradient(135deg, #6F00FF 0%, #2A0C6E 100%);
+            border-color: #6F00FF;
+        }
+
+        .third-hero-btn:hover {
+            background: linear-gradient(135deg, #2A0C6E 0%, #6F00FF 100%);
+            border-color: #2A0C6E;
+        }
+
+
+        
