@@ -19,7 +19,9 @@ export function LandingPage() {
                 </ul>
             </div>
             <!-- Logo/Brand - larger text -->
-            <a class="btn btn-ghost text-2xl font-bold">VibeReach</a>
+            <a class="text-4xl font-semibold pl-2 poppins gradient-text tracking-tight">
+  Vibe<span class="font-bold">Reach</span>
+</a>
         </div>
         
         <!-- Centered desktop menu -->
