@@ -2,6 +2,8 @@ import './style.css'
 import './fonts.css';
 import { LandingPage } from './components/LandingPage.js'
 import { HeadlineGenerator } from './components/HeadlineGenerator.js'
+import { marked } from 'marked'
+import DOMPurify from 'dompurify'
 
 class App {
   constructor() {
@@ -228,8 +230,11 @@ class App {
   showResult(result) {
     const loaderSection = document.getElementById('loader-section')
     const resultSection = document.getElementById('result-section')
-    
+
     loaderSection.classList.add('hidden')
+
+    const safeHTML = DOMPurify.sanitize(marked.parse(result))
+
     resultSection.innerHTML = `
       <div class="card bg-base-100 shadow-2xl">
         <div class="card-body p-8">
@@ -237,8 +242,8 @@ class App {
             <h2 class="text-4xl font-bold text-base-content mb-4">Your Hormozi-Style Headlines & Subjects</h2>
             <div class="badge badge-success badge-lg">Generated Successfully!</div>
           </div>
-          <div class="bg-base-200 rounded-lg p-6 mb-8">
-            <pre class="whitespace-pre-wrap text-sm leading-relaxed">${typeof result === 'string' ? result : JSON.stringify(result, null, 2)}</pre>
+          <div class="bg-base-200 rounded-lg p-6 mb-8 prose prose-sm max-w-none dark:prose-invert">
+            ${safeHTML}
           </div>
           <div class="text-center">
             <button onclick="location.reload()" class="btn btn-primary btn-lg gap-2">
