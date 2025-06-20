@@ -131,7 +131,7 @@ export function LandingPage() {
 
       
       <!-- How It Works Section -->
-      <div id="how-it-works" class="bg-base-100 px-6 py-20">
+      <div id="how-it-works" class="bg-base-100 px-6 py-20 pb-5">
           <div class="container mx-auto px-6">
               <div class="text-center mb-16">
                   <div class="badge badge-primary badge-outline text-lg p-3 mb-4">
@@ -834,12 +834,59 @@ export function LandingPage() {
 
 
 
-
-        <!-- =============================================== -->
+      <!-- =============================================== -->
         <!-- START: FINAL CALL TO ACTION (CTA) SECTION      -->
         <!-- =============================================== -->
-        <div class="px-4 py-10 md:py-28 bg-base-100">
-          <div class="container mx-auto px-6 py-20 text-center">
+        <div class="px-4 py-10 md:py-28 bg-base-100 relative overflow-hidden">
+          <!-- Left Side Graphics -->
+          <div class="absolute left-0 top-1/2 transform -translate-y-1/2 opacity-30 hidden lg:block">
+            <div class="flex flex-col items-center space-y-8 pl-8">
+              <!-- AI Brain Icon -->
+              <div class="w-20 h-20 rounded-full bg-primary/20 flex items-center justify-center">
+                <svg class="w-12 h-12 text-primary" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                </svg>
+              </div>
+              <!-- Email Icon -->
+              <div class="w-16 h-16 rounded-lg bg-secondary/20 flex items-center justify-center rotate-12">
+                <svg class="w-10 h-10 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                </svg>
+              </div>
+              <!-- Target Icon -->
+              <div class="w-14 h-14 rounded-full bg-accent/20 flex items-center justify-center -rotate-12">
+                <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2l3.09 6.26L22 9l-5 4.87L18.18 22 12 18.27 5.82 22 7 13.87 2 9l6.91-.74L12 2z"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Side Graphics -->
+          <div class="absolute right-0 top-1/2 transform -translate-y-1/2 opacity-40 hidden lg:block">
+            <div class="flex flex-col items-center space-y-8 pr-8">
+              <!-- Analytics Chart Icon -->
+              <div class="w-18 h-18 rounded-lg bg-info/20 flex items-center justify-center -rotate-6">
+                <svg class="w-10 h-10 text-info" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+                </svg>
+              </div>
+              <!-- Lightning/Speed Icon -->
+              <div class="w-16 h-16 rounded-full bg-warning/20 flex items-center justify-center rotate-12">
+                <svg class="w-10 h-10 text-warning" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M7 2v11h3v9l7-12h-4l4-8z"/>
+                </svg>
+              </div>
+              <!-- Connection/Network Icon -->
+              <div class="w-14 h-14 rounded-lg bg-success/20 flex items-center justify-center">
+                <svg class="w-8 h-8 text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="container mx-auto px-6 py-20 text-center relative z-10">
             <h2 class="text-4xl md:text-5xl font-bold text-base-content">
               Ready to Stop Guessing and Start Converting?
             </h2>
@@ -853,7 +900,7 @@ export function LandingPage() {
               </a>
               <a href="#demo" class="btn btn-outline btn-lg gap-2">
                 <i class="fas fa-play"></i>
-                Book Demoo
+                Book Demo
               </a>
             </div>
             <p class="text-sm text-base-content/50 mt-4">Join the program & shape the future of outreach.</p>
@@ -865,12 +912,15 @@ export function LandingPage() {
 
 
 
+    
+
+
 
         <!-- =============================================== -->
         <!-- START: FOOTER SECTION                          -->
         <!-- =============================================== -->
        
-       <footer class="w-full px-4 py-6 pt-[10vh] flex flex-col items-center gap-4 text-base text-gray-600 bg-base-100">
+       <footer class="w-full px-4 py-6 pt-[5vh] flex flex-col items-center gap-4 text-base text-gray-600 bg-base-100">
         <!-- Social Icons -->
         <div class="flex items-center justify-center gap-6">
           <a href="https://gatara.org" target="_blank" class="hover:text-primary text-xl">
@@ -888,12 +938,9 @@ export function LandingPage() {
         </div>
       </footer>
 
-
-
         <!-- =============================================== -->
         <!-- END: FOOTER SECTION                            -->
         <!-- =============================================== -->
-
 
 
 
