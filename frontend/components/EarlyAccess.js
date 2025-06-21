@@ -11,9 +11,9 @@ export function EarlyAccess() {
           </a>
         </div>
         
-        <div class="max-w-5xl mx-auto">
+        <div class="w-[70vw] h-[70vh] mx-auto flex flex-col justify-center">
           <!-- Welcome Screen -->
-          <div id="welcome-screen" class="bg-base-100 rounded-lg shadow-sm">
+          <div id="welcome-screen" class="bg-base-100 rounded-lg shadow-sm h-full">
             <div class="p-12 text-center">
               <h1 class="text-5xl font-bold text-base-content mb-6">Get Early Access</h1>
               <p class="text-xl text-base-content/70 leading-relaxed mb-8 max-w-3xl mx-auto">Be among the first to use AI to 10x your outbound pipeline with smart, personalized cold emails — without the manual work.</p>
@@ -27,7 +27,7 @@ export function EarlyAccess() {
           </div>
 
           <!-- Multi-step Form -->
-          <div id="form-container" class="bg-base-100 rounded-lg shadow-sm hidden">
+          <div id="form-container" class="bg-base-100 rounded-lg shadow-sm h-full hidden">
             <!-- Progress Bar -->
             <div class="px-12 pt-8">
               <div class="w-full bg-base-200 rounded-full h-2 mb-8">
@@ -36,7 +36,7 @@ export function EarlyAccess() {
             </div>
 
             <div class="px-12 pb-12">
-              <form id="early-access-form">
+              <form id="early-access-form" class="h-full flex flex-col justify-evenly">
                 <!-- Step 1: Name -->
                 <div class="form-step active" data-step="1">
                   <div class="text-center mb-12">
@@ -316,7 +316,7 @@ export function EarlyAccess() {
                 </div>
 
                 <!-- Navigation Buttons -->
-                <div class="flex justify-between items-center mt-16 max-w-2xl mx-auto">
+                <div class="flex justify-center gap-8 items-center mt-16 max-w-2xl mx-auto">
                   <button type="button" id="prev-btn" class="text-primary text-lg font-medium hover:text-primary-focus transition-colors disabled:text-base-content/30 disabled:cursor-not-allowed flex items-center gap-2" disabled>
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
@@ -338,7 +338,7 @@ export function EarlyAccess() {
           </div>
 
           <!-- Thank You Screen -->
-          <div id="thank-you-screen" class="bg-base-100 rounded-lg shadow-sm hidden">
+          <div id="thank-you-screen" class="bg-base-100 rounded-lg shadow-sm h-full hidden">
             <div class="p-12 text-center">
               <h1 class="text-5xl font-bold text-base-content mb-6">Thanks for signing up for early access!</h1>
               <p class="text-xl text-base-content/70 leading-relaxed mb-8 max-w-3xl mx-auto">We'll reach out soon with your invite to try VibeOutreach before anyone else.</p>
