@@ -19,7 +19,7 @@ export function LandingPage() {
                 </ul>
             </div>
             <!-- Logo/Brand - larger text -->
-            <a class="text-4xl font-semibold pl-2 poppins gradient-text tracking-tight">
+            <a class="text-3xl font-semibold pl-2 poppins gradient-text tracking-tight">
   Vibe<span class="font-bold">Reach</span>
 </a>
         </div>
@@ -35,7 +35,7 @@ export function LandingPage() {
         
         <!-- Navbar end - button positioned on far right -->
         <div class="navbar-end">
-            <a href="https://gatara.org/early-adopters-program/" class="btn btn-primary text-lg px-6">Get Early Access</a>
+            <a href="https://gataraai.zohobookings.com/#/ceo-call" class="btn btn-primary text-lg px-6">Get Early Access</a>
         </div>
     </div>
     
@@ -55,7 +55,7 @@ export function LandingPage() {
                   <!-- Hero Text -->
                   <div class="flex-1">
                       <div class="badge badge-primary badge-outline text-base p-3 mb-4">
-                          🚀 OUTREACH REVOLUTION
+                          🚀 B2B OUTREACH REVOLUTION
                       </div>
                       <h1 class="text-5xl lg:text-7xl font-bold gradient-text mb-6 leading-tight">
                           Turn Cold Emails Into 
@@ -94,11 +94,11 @@ export function LandingPage() {
                       </div>
 
                       <div class="flex flex-col sm:flex-row gap-4">
-                          <a href="https://gatara.org/early-adopters-program/" class="btn btn-primary btn-lg gap-2 hover:scale-105 transition-transform shadow-lg">
+                          <a href="#" class="btn btn-primary btn-lg gap-2 hover:scale-105 transition-transform shadow-lg">
                               <i class="fas fa-rocket"></i>
                               Join Waitlist
                           </a>
-                          <a href="#demo" class="btn btn-outline btn-lg gap-2">
+                          <a href="https://gataraai.zohobookings.com/#/ceo-call" class="btn btn-outline btn-lg gap-2">
                               <i class="fas fa-play"></i>
                               Book Demoo
                           </a>
@@ -307,10 +307,9 @@ export function LandingPage() {
                     <p class="text-sm font-semibold text-secondary mb-2 text-center">AI-Personalized & Stylized</p>
                     <div class="mockup-code bg-neutral text-neutral-content text-sm">
                       <pre data-prefix="$"><code>Hi Alex,</code></pre>
-                      <pre data-prefix=">" class="text-success"><code>Noticed GT-Reach's launch on <span class="badge badge-secondary font-bold">Product Hunt</span>.</code></pre>
-                      <pre data-prefix=">" class="text-success"><code>The way you're tackling B2B outreach is impressive.</code></pre>
-                      <pre data-prefix=">" class="text-success"><code>I saw you mentioned <span class="badge badge-secondary font-bold">scaling challenges</span> in your</code></pre>
-                      <pre data-prefix=">" class="text-success"><code>latest <span class="badge badge-secondary font-bold">LinkedIn</span> post...</code></pre>
+                      <pre data-prefix=">" class="text-success"><code>Curious — how are you currently handling cold outreach <span class="badge badge-secondary font-bold">MediaAI</span>?</code></pre>
+                      <pre data-prefix=">" class="text-success"><code>What would it look like if every prospect you emailed felt like</code></pre>
+                      <pre data-prefix=">" class="text-success"><code>the message was written <span class="badge badge-secondary font-bold">just</span> for them?</code></pre>
                     </div>
                   </div>
                 </div>
@@ -320,24 +319,24 @@ export function LandingPage() {
             <!-- Text Side: Features & Benefits -->
             <div class="flex-1 text-center lg:text-left">
               <div class="badge badge-primary badge-outline text-lg p-3 mb-4 font-semibold">
-                HYPER-PERSONALIZATION
+                PERSONALIZATION
               </div>
               <h2 class="text-4xl lg:text-5xl font-bold mb-4">Go Beyond <code class="text-primary">{first_name}</code></h2>
               <p class="text-lg text-base-content/80 mb-6 leading-relaxed">
-                Our AI engine acts as your research assistant. It analyzes your lead's information and your company's unique voice to craft emails that are impossible to ignore.
+                Our AI analyzes your lead's information and your company's unique voice to craft emails that are personlized to get you the result.
               </p>
               <ul class="space-y-4">
                 <li class="flex items-start justify-center lg:justify-start gap-3">
                   <i class="fas fa-check-circle text-secondary mt-1.5"></i>
-                  <span>Analyzes LinkedIn profiles and company websites for relevant insights.</span>
+                  <span>Analyzes lead's data, experince, and their company for relevant insights.</span>
                 </li>
                 <li class="flex items-start justify-center lg:justify-start gap-3">
                   <i class="fas fa-check-circle text-secondary mt-1.5"></i>
-                  <span>Adapts to your business tone and style for authentic communication.</span>
+                  <span>Adapts to your business tone and style for branded communication.</span>
                 </li>
                 <li class="flex items-start justify-center lg:justify-start gap-3">
                   <i class="fas fa-check-circle text-secondary mt-1.5"></i>
-                  <span>Generates unique, compelling opening lines that build instant rapport.</span>
+                  <span>Generates personlized opening lines that build trust.</span>
                 </li>
               </ul>
             </div>
@@ -373,8 +372,8 @@ export function LandingPage() {
                         <div class="w-3 h-3 rounded-full bg-base-content/20"></div>
                       </div>
                       <div class="p-4 font-mono text-sm leading-relaxed text-neutral-content">
-                        <p>...thought you'd find this useful:</p>
-                        <a href="#" class="link link-primary">yourwebsite.com/case-study</a>
+                        <p>...P.S. Here’s a quick look at the product I mentioned:</p>
+                        <a href="#" class="link link-primary">outreach.gatara.org</a>
                       </div>
                     </div>
                   </div>
@@ -390,23 +389,24 @@ export function LandingPage() {
                     <p class="text-sm font-semibold text-secondary mb-2 text-center">Actionable Engagement Report</p>
                     <div class="card bg-neutral text-neutral-content shadow-md">
                       <div class="card-body p-5">
-                        <h4 class="card-title text-base text-neutral-content">Report for: Alex Johnson</h4>
+                        <h4 class="card-title text-base text-neutral-content">Report for: Alex Johnson - Email #3/Campaign #1</h4>
                         
                         <!-- CORRECTED STATS COMPONENT -->
                         <div class="stats stats-vertical sm:stats-horizontal shadow bg-base-100 my-2">
                           <div class="stat p-3">
                             <div class="stat-title">Total Clicks</div>
-                            <div class="stat-value text-base-content text-2xl">7</div>
+                            <div class="stat-value text-base-content text-2xl">2</div>
                           </div>
                           <div class="stat p-3">
                             <div class="stat-title">Lead Status</div>
-                            <div class="stat-value text-error text-2xl">Hot</div>
+                            <div class="stat-value text-error text-2xl">Interested</div>
                           </div>
                         </div>
                         
                         <div class="mt-2">
                           <!-- CORRECTED TEXT COLOR -->
-                          <p class="text-sm font-semibold text-neutral-content mb-2">Click Details:</p>
+                          <p class="text-sm font-semibold text-neutral-content mb-0">Click Details:</p>
+                          <p class="text-sm  text-neutral-content mb-2">{this can be discovered via UTM sources on your website}</p>
                           <ul class="text-xs font-mono space-y-1 text-neutral-content">
                             <li>- <span class="font-bold">/case-study</span> (4 times)</li>
                             <li>- <span class="font-bold">/pricing</span> (2 times)</li>
@@ -427,7 +427,7 @@ export function LandingPage() {
               </div>
               <h2 class="text-4xl lg:text-5xl font-bold mb-4">Track Every Click, Uncover Intent</h2>
               <p class="text-lg text-base-content/80 mb-6 leading-relaxed">
-                Stop guessing. Our system automatically converts every link into a unique, trackable URL for each prospect. See exactly who is engaging and what they're interested in to prioritize your follow-ups.
+                Stop guessing. Our system automatically converts every link into a unique, trackable URL for each prospect. See exactly who is engaging <span class="text-primary">{by VibeReach}</span> and what they're interested in to prioritize your follow-ups <span class="text-accent">{by tracking UTM sources on your website}</span>.
               </p>
               <ul class="space-y-4">
                 <li class="flex items-start justify-center lg:justify-start gap-3">
@@ -440,7 +440,7 @@ export function LandingPage() {
                 </li>
                 <li class="flex items-start justify-center lg:justify-start gap-3">
                   <i class="fas fa-check-circle text-secondary mt-1.5"></i>
-                  <span>Get real-time insights to identify "hot leads" who are actively exploring your solution.</span>
+                  <span>Get insights to identify "interested leads" who are actively exploring your solution.</span>
                 </li>
               </ul>
             </div>
@@ -485,16 +485,10 @@ export function LandingPage() {
                   <!-- Step 2: AI generates in that style -->
                   <div class="w-full">
                     <p class="text-sm font-semibold text-secondary mb-2 text-center">2. AI Generates In Your Voice</p>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                      <!-- Casual Output -->
-                      <div class="border bg-neutral rounded-lg p-3">
-                        <p class="font-bold text-sm text-center text-neutral-content mb-2">Casual Tone Output</p>
-                        <p class="text-xs text-neutral-content/80">Hey Alex, just saw you launched on PH. Killer stuff! Let's connect?</p>
-                      </div>
-                      <!-- Formal Output -->
-                      <div class="border bg-neutral rounded-lg p-3">
-                        <p class="font-bold text-sm text-center text-neutral-content mb-2">Formal Tone Output</p>
-                        <p class="text-xs text-neutral-content/80">Dear Mr. Johnson, Congratulations on the successful launch. I propose a brief call to discuss potential synergies.</p>
+                    <div class="mockup-window border bg-neutral">
+                      <div class="p-4 bg-neutral-focus text-neutral-content font-mono text-xs leading-relaxed">
+                        <p class="whitespace-pre-wrap">"Hey team, quick update on the Q3 numbers..."</p>
+                        <p class="whitespace-pre-wrap mt-2">"To whom it may concern, this letter serves as formal notification..."</p>
                       </div>
                     </div>
                   </div>
@@ -509,16 +503,16 @@ export function LandingPage() {
               </div>
               <h2 class="text-4xl lg:text-5xl font-bold mb-4">Your Voice,<br>Amplified by AI</h2>
               <p class="text-lg text-base-content/80 mb-6 leading-relaxed">
-                Generic outreach doesn't work. Feed our AI examples of your writing—from formal reports to casual DMs—and it learns to communicate with your unique tone, vocabulary, and style. The result is outreach that is authentically *yours*.
+                Generic outreach doesn't work. Feed our AI examples of your writing—your own buisness tone and style—and it communicate with your unique tone, vocabulary, and style. The result is outreach that is authentically *yours*.
               </p>
               <ul class="space-y-4">
                 <li class="flex items-start justify-center lg:justify-start gap-3">
                   <i class="fas fa-check-circle text-secondary mt-1.5"></i>
-                  <span>Maintains your personal or company brand consistency across all outreach.</span>
+                  <span>Maintains your brand consistency across all outreach.</span>
                 </li>
                 <li class="flex items-start justify-center lg:justify-start gap-3">
                   <i class="fas fa-check-circle text-secondary mt-1.5"></i>
-                  <span>Builds genuine rapport by sounding like a human, not a generic template.</span>
+                  <span>Builds genuine transperancy & trust by sounding like a human, not a generic template, or AI ;)</span>
                 </li>
                 <li class="flex items-start justify-center lg:justify-start gap-3">
                   <i class="fas fa-check-circle text-secondary mt-1.5"></i>
@@ -703,7 +697,7 @@ export function LandingPage() {
                         <div class="p-6 border-t border-base-300 email-mockup">
                             <div class="border-b border-base-300 pb-4 mb-4">
                                 <div class="flex items-center gap-3 mb-2">
-                                    <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center text-white text-xs">JS</div>
+                                    <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center text-white text-xs">AH</div>
                                     <div>
                                         <div class="font-semibold">ahmad@vibereach.com</div>
                                         <div class="text-sm text-base-content/60">to: sarah@techstart.com</div>
@@ -715,11 +709,11 @@ export function LandingPage() {
                             <div class="space-y-3 text-sm">
                                 <p>Hi Sarah,</p>
                                 <p>Just saw the news about TechStart's $5M Series A on TechCrunch - huge congratulations! The AI-powered customer service platform sounds like it's solving a real pain point.</p>
-                                <p>I noticed from your LinkedIn post that you're scaling the sales team rapidly. At GT-Reach, we've helped companies like yours increase their outbound response rates by 300% during growth phases.</p>
+                                <p>I noticed from your LinkedIn post that you're scaling the sales team rapidly. At VibeReach, we've helped companies like yours increase their outbound response rates by 300% during growth phases.</p>
                                 <p>Given TechStart's focus on AI, I thought you might find our approach interesting - we use AI to personalize cold outreach at scale, which might be perfect as you're building your enterprise sales motion.</p>
                                 <p>Would you be open to a brief conversation about how we've helped similar AI startups accelerate their sales pipeline?</p>
-                                <p>Best,<br>John</p>
-                                <p class="text-xs text-base-content/60">P.S. - Love the company's mission of "making customer service human again" 👏</p>
+                                <p>Best,<br>Ahmad</p>
+                                <p class="text-xs text-base-content/60">P.S. - Love the company's mission of "making customer service human again"</p>
                             </div>
                         </div>
                     </div>
@@ -770,7 +764,7 @@ export function LandingPage() {
                         </div>
                         <h3 class="text-xl font-bold mb-3">Voice & Tone Matching</h3>
                         <p class="text-base-content/70">
-                            Learns your writing style and adapts messages to match your authentic voice and brand personality.
+                            Your buisness tone and style, the result outreach that is authentically *yours*.
                         </p>
                     </div>
                 </div>
@@ -783,7 +777,7 @@ export function LandingPage() {
                         </div>
                         <h3 class="text-xl font-bold mb-3">Advanced Analytics</h3>
                         <p class="text-base-content/70">
-                            Track opens, clicks, replies, and conversions with detailed insights to optimize your campaigns.
+                            Track opens, clicks, replies, and conversions with relevant insights to operate based on math, not guess work.
                         </p>
                     </div>
                 </div>
@@ -794,9 +788,9 @@ export function LandingPage() {
                         <div class="w-16 h-16 bg-info/10 rounded-xl flex items-center justify-center mb-4">
                             <i class="fas fa-sync text-info text-3xl"></i>
                         </div>
-                        <h3 class="text-xl font-bold mb-3">Smart Follow-ups</h3>
+                        <h3 class="text-xl font-bold mb-3">Email Sequence</h3>
                         <p class="text-base-content/70">
-                            Automatically schedules and personalizes follow-up emails based on prospect behavior and engagement.
+                            Schedules emails based on the Campaign email sequence you make.
                         </p>
                     </div>
                 </div>
@@ -809,7 +803,7 @@ export function LandingPage() {
                         </div>
                         <h3 class="text-xl font-bold mb-3">Compliance & Deliverability</h3>
                         <p class="text-base-content/70">
-                            Built-in compliance checks and deliverability optimization to ensure your emails reach the inbox.
+                            Using your Mail Client SMTP to ensure your emails reach the inbox.
                         </p>
                     </div>
                 </div>
@@ -896,11 +890,11 @@ export function LandingPage() {
               Transform your cold outreach from a numbers game into a science. Leverage AI to build real connections and see measurable results.
             </p>
             <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
-              <a href="https://gatara.org/early-adopters-program/" class="btn btn-primary btn-lg gap-2 shadow-lg hover:scale-105 transition-transform">
+              <a href="https://gataraai.zohobookings.com/#/ceo-call" class="btn btn-primary btn-lg gap-2 shadow-lg hover:scale-105 transition-transform">
                 Get Early Access Now
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H4" /></svg>
               </a>
-              <a href="#demo" class="btn btn-outline btn-lg gap-2">
+              <a href="https://gataraai.zohobookings.com/#/ceo-call" class="btn btn-outline btn-lg gap-2">
                 <i class="fas fa-play"></i>
                 Book Demo
               </a>
@@ -928,7 +922,7 @@ export function LandingPage() {
           <a href="https://gatara.org" target="_blank" class="hover:text-primary text-xl">
             <i class="fas fa-globe"></i>
           </a>
-          <a href="https://www.linkedin.com/company/gataraai" target="_blank" class="hover:text-primary text-xl">
+          <a href="https://www.linkedin.com/company/gatara-ai" target="_blank" class="hover:text-primary text-xl">
             <i class="fab fa-linkedin"></i>
           </a>
         </div>

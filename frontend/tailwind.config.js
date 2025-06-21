@@ -99,9 +99,9 @@ export default {
           "error": "#bf4d43", // error
           
           // Custom variables
-          "--book-cloth": "#cc785c",
-          "--kraft": "#d4a27f",
-          "--manilla": "#ebdbbc",
+          "book-cloth": "#cc785c",
+          "kraft": "#d4a27f",
+          "manilla": "#ebdbbc",
           
           // Border radius
           "--rounded-box": "0.5rem",

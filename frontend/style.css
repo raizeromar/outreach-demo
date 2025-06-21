@@ -109,7 +109,13 @@
             background: linear-gradient(135deg, #2A0C6E 0%, #6F00FF 100%);
             border-color: #2A0C6E;
         }
-
+        
+        .hormozi-gradient-text {
+          background: linear-gradient(135deg, #6F00FF 0%, #2A0C6E 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+        }
 
 .poppins {
   font-family: 'Poppins', sans-serif;

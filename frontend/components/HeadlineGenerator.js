@@ -15,7 +15,8 @@ export function HeadlineGenerator() {
           <div class="card bg-base-100 shadow-2xl">
             <div class="card-body p-8">
               <div class="text-center mb-8">
-                <h1 class="text-4xl font-bold text-base-content mb-4">Get Started</h1>
+                <h1 class="text-4xl font-bold text-base-content mb-1">Get Started</h1>
+                <h1 class="text-xl text-base-content mb-2 hormozi-gradient-text">Generate Hormozi-Style Headlines & Email Subjects for Free! ;)</h1>
                 <p class="text-lg text-base-content/70">First, we need some basic information about you</p>
               </div>
               
