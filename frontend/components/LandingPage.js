@@ -35,7 +35,7 @@ export function LandingPage() {
         
         <!-- Navbar end - button positioned on far right -->
         <div class="navbar-end">
-            <a href="https://gataraai.zohobookings.com/#/ceo-call" class="btn btn-primary text-lg px-6">Get Early Access</a>
+            <a href="#early-access" class="btn btn-primary text-lg px-6">Get Early Access</a>
         </div>
     </div>
     
@@ -94,7 +94,7 @@ export function LandingPage() {
                       </div>
 
                       <div class="flex flex-col sm:flex-row gap-4">
-                          <a href="#" class="btn btn-primary btn-lg gap-2 hover:scale-105 transition-transform shadow-lg">
+                          <a href="#early-access" class="btn btn-primary btn-lg gap-2 hover:scale-105 transition-transform shadow-lg">
                               <i class="fas fa-rocket"></i>
                               Join Waitlist
                           </a>
@@ -890,7 +890,7 @@ export function LandingPage() {
               Transform your cold outreach from a numbers game into a science. Leverage AI to build real connections and see measurable results.
             </p>
             <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
-              <a href="https://gataraai.zohobookings.com/#/ceo-call" class="btn btn-primary btn-lg gap-2 shadow-lg hover:scale-105 transition-transform">
+              <a href="#early-access" class="btn btn-primary btn-lg gap-2 shadow-lg hover:scale-105 transition-transform">
                 Get Early Access Now
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H4" /></svg>
               </a>

@@ -2,6 +2,7 @@ import './style.css'
 import './fonts.css';
 import { LandingPage } from './components/LandingPage.js'
 import { HeadlineGenerator } from './components/HeadlineGenerator.js'
+import { EarlyAccess } from './components/EarlyAccess.js'
 import { marked } from 'marked'
 import DOMPurify from 'dompurify'
 
@@ -9,6 +10,8 @@ class App {
   constructor() {
     this.currentPage = 'landing'
     this.appElement = document.querySelector('#app')
+    this.currentStep = 1
+    this.totalSteps = 13
     this.init()
   }
 
@@ -41,10 +44,231 @@ class App {
         this.appElement.innerHTML = HeadlineGenerator()
         this.setupHeadlineGeneratorEvents()
         break
+      case 'early-access':
+        this.appElement.innerHTML = EarlyAccess()
+        this.setupEarlyAccessEvents()
+        break  
       default:
         this.appElement.innerHTML = LandingPage()
     }
   }
+
+
+
+
+  setupEarlyAccessEvents() {
+    const startFormBtn = document.getElementById('start-form')
+    const nextBtn = document.getElementById('next-btn')
+    const prevBtn = document.getElementById('prev-btn')
+    const submitBtn = document.getElementById('submit-btn')
+    const form = document.getElementById('early-access-form')
+
+    if (startFormBtn) {
+      startFormBtn.addEventListener('click', this.showForm.bind(this))
+    }
+
+    if (nextBtn) {
+      nextBtn.addEventListener('click', this.nextStep.bind(this))
+    }
+
+    if (prevBtn) {
+      prevBtn.addEventListener('click', this.prevStep.bind(this))
+    }
+
+    if (form) {
+      form.addEventListener('submit', this.handleFormSubmit.bind(this))
+    }
+  }
+
+  showForm() {
+    const welcomeScreen = document.getElementById('welcome-screen')
+    const formContainer = document.getElementById('form-container')
+    
+    welcomeScreen.classList.add('hidden')
+    formContainer.classList.remove('hidden')
+    formContainer.classList.add('fade-in')
+  }
+
+  nextStep() {
+    if (!this.validateCurrentStep()) {
+      return
+    }
+
+    if (this.currentStep < this.totalSteps) {
+      this.hideCurrentStep()
+      this.currentStep++
+      this.showCurrentStep()
+      this.updateProgress()
+      this.updateButtons()
+    }
+  }
+
+  prevStep() {
+    if (this.currentStep > 1) {
+      this.hideCurrentStep()
+      this.currentStep--
+      this.showCurrentStep()
+      this.updateProgress()
+      this.updateButtons()
+    }
+  }
+
+  validateCurrentStep() {
+    const currentStepElement = document.querySelector(`.form-step[data-step="${this.currentStep}"]`)
+    const inputs = currentStepElement.querySelectorAll('input[required]')
+    
+    for (let input of inputs) {
+      if (!input.value.trim()) {
+        input.focus()
+        this.showError('Please fill in all required fields')
+        return false
+      }
+      
+      if (input.type === 'email' && !this.validateEmail(input.value)) {
+        input.focus()
+        this.showError('Please enter a valid email address')
+        return false
+      }
+      
+      if (input.type === 'url' && !this.validateURL(input.value)) {
+        input.focus()
+        this.showError('Please enter a valid URL')
+        return false
+      }
+    }
+    
+    // Check radio buttons
+    const radioGroups = currentStepElement.querySelectorAll('input[type="radio"][required]')
+    const radioNames = [...new Set([...radioGroups].map(radio => radio.name))]
+    
+    for (let name of radioNames) {
+      const checked = currentStepElement.querySelector(`input[name="${name}"]:checked`)
+      if (!checked) {
+        this.showError('Please select an option')
+        return false
+      }
+    }
+    
+    return true
+  }
+
+  validateEmail(email) {
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+    return emailPattern.test(email)
+  }
+
+  validateURL(url) {
+    try {
+      new URL(url)
+      return true
+    } catch {
+      return false
+    }
+  }
+
+  hideCurrentStep() {
+    const currentStepElement = document.querySelector(`.form-step[data-step="${this.currentStep}"]`)
+    if (currentStepElement) {
+      currentStepElement.classList.remove('active')
+      currentStepElement.style.opacity = '0'
+      setTimeout(() => {
+        currentStepElement.style.display = 'none'
+      }, 300)
+    }
+  }
+
+  showCurrentStep() {
+    const currentStepElement = document.querySelector(`.form-step[data-step="${this.currentStep}"]`)
+    if (currentStepElement) {
+      currentStepElement.style.display = 'block'
+      setTimeout(() => {
+        currentStepElement.style.opacity = '1'
+        currentStepElement.classList.add('active')
+      }, 50)
+    }
+  }
+
+  updateProgress() {
+    const progressBar = document.getElementById('progress-bar')
+    const progressPercent = (this.currentStep / this.totalSteps) * 100
+    
+    if (progressBar) {
+      progressBar.style.width = `${progressPercent}%`
+    }
+
+    // Update step indicators
+    const steps = document.querySelectorAll('.step')
+    steps.forEach((step, index) => {
+      if (index < this.currentStep) {
+        step.classList.add('step-primary')
+      } else {
+        step.classList.remove('step-primary')
+      }
+    })
+  }
+
+  updateButtons() {
+    const nextBtn = document.getElementById('next-btn')
+    const prevBtn = document.getElementById('prev-btn')
+    const submitBtn = document.getElementById('submit-btn')
+
+    if (prevBtn) {
+      prevBtn.disabled = this.currentStep === 1
+    }
+
+    if (this.currentStep === this.totalSteps) {
+      if (nextBtn) nextBtn.classList.add('hidden')
+      if (submitBtn) submitBtn.classList.remove('hidden')
+    } else {
+      if (nextBtn) nextBtn.classList.remove('hidden')
+      if (submitBtn) submitBtn.classList.add('hidden')
+    }
+  }
+
+  async handleFormSubmit(e) {
+    e.preventDefault()
+    
+    if (!this.validateCurrentStep()) {
+      return
+    }
+
+    const formData = new FormData(e.target)
+    const data = Object.fromEntries(formData.entries())
+
+    // Show loading state
+    const submitBtn = document.getElementById('submit-btn')
+    const originalText = submitBtn.innerHTML
+    submitBtn.innerHTML = `
+      <span class="loading loading-spinner loading-sm"></span>
+      Submitting...
+    `
+    submitBtn.disabled = true
+
+    try {
+      // Simulate API call
+      await new Promise(resolve => setTimeout(resolve, 2000))
+      
+      this.showThankYou()
+    } catch (error) {
+      this.showError('Submission failed. Please try again.')
+    } finally {
+      submitBtn.innerHTML = originalText
+      submitBtn.disabled = false
+    }
+  }
+
+  showThankYou() {
+    const formContainer = document.getElementById('form-container')
+    const thankYouScreen = document.getElementById('thank-you-screen')
+    
+    formContainer.classList.add('hidden')
+    thankYouScreen.classList.remove('hidden')
+    thankYouScreen.classList.add('fade-in')
+  }
+  
+  
+
+
 
   setupHeadlineGeneratorEvents() {
     const userForm = document.getElementById('user-form')

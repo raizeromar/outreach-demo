@@ -120,3 +120,69 @@
 .poppins {
   font-family: 'Poppins', sans-serif;
 }
+
+
+
+.input-underline:focus {
+  border-bottom-color: var(--fallback-p, oklch(var(--p)/var(--tw-border-opacity))) !important;
+}
+
+.input-underline::placeholder {
+  color: var(--fallback-bc, oklch(var(--bc)/0.4));
+}
+
+/* Form step transitions */
+.form-step {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.form-step.active {
+  display: block;
+  opacity: 1;
+}
+
+/* Custom step styling */
+.steps .step::before {
+  transition: all 0.3s ease;
+}
+
+.steps .step-primary::before {
+  background-color: #d97757;
+  border-color: #d97757;
+}
+
+/* Theme transition */
+* {
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+/* Custom scrollbar for dark theme */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--fallback-b2, oklch(var(--b2)/var(--tw-bg-opacity)));
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--fallback-bc, oklch(var(--bc)/0.2));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--fallback-bc, oklch(var(--bc)/0.3));
+}
+
+/* Radio button hover effects */
+.form-control label:hover {
+  background-color: var(--fallback-b2, oklch(var(--b2)/var(--tw-bg-opacity)));
+}
+
+/* Custom radio styling */
+.radio:checked {
+  background-color: var(--fallback-p, oklch(var(--p)/var(--tw-bg-opacity)));
+  border-color: var(--fallback-p, oklch(var(--p)/var(--tw-border-opacity)));
+}
