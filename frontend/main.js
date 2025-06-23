@@ -225,38 +225,54 @@ class App {
       if (submitBtn) submitBtn.classList.add('hidden')
     }
   }
-
+  
   async handleFormSubmit(e) {
-    e.preventDefault()
+    e.preventDefault();
     
-    if (!this.validateCurrentStep()) {
-      return
-    }
+    // Validate current step
+    if (!this.validateCurrentStep()) return;
 
-    const formData = new FormData(e.target)
-    const data = Object.fromEntries(formData.entries())
+    // Get form data
+    const formData = new FormData(e.target);
+    const data = Object.fromEntries(formData.entries());
+
+    // Add UTM parameters from URL
+    const urlParams = new URLSearchParams(window.location.search);
+    ['utm_id', 'utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content', 'ref'].forEach(param => {
+      if (urlParams.has(param)) data[param] = urlParams.get(param);
+    });
+
+    // Add timestamp
+    data.timestamp = new Date().toISOString();
 
     // Show loading state
-    const submitBtn = document.getElementById('submit-btn')
-    const originalText = submitBtn.innerHTML
+    const submitBtn = document.getElementById('submit-btn');
+    const originalText = submitBtn.innerHTML;
     submitBtn.innerHTML = `
       <span class="loading loading-spinner loading-sm"></span>
       Submitting...
-    `
-    submitBtn.disabled = true
+    `;
+    submitBtn.disabled = true;
 
     try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 2000))
+      const url = new URL('https://script.google.com/macros/s/AKfycbzgO2EG_gIkLvHgeZu3N0uTcd_16ZUrnwUwO29T_FJrtg883JK8tVqTW2sjc0xt_iYf9g/exec');
+      url.search = new URLSearchParams(data).toString();
+
+      const response = await fetch(url, { method: 'GET', redirect: 'follow' });
       
-      this.showThankYou()
+      if (!response.ok) throw new Error('Submission failed');
+      this.showThankYou();
+      
     } catch (error) {
-      this.showError('Submission failed. Please try again.')
+      console.error('Submission error:', error);
+      this.showError('Submission failed. Please try again.');
+      
     } finally {
-      submitBtn.innerHTML = originalText
-      submitBtn.disabled = false
+      submitBtn.innerHTML = originalText;
+      submitBtn.disabled = false;
     }
   }
+
 
   showThankYou() {
     const formContainer = document.getElementById('form-container')
