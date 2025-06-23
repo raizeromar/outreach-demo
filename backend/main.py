@@ -58,7 +58,7 @@ async def submit_lead(request: Request):
     mark_user_used(full_name, email, linkedin)
 
     # Send to Google Sheet
-    sheet_url = "https://script.google.com/macros/s/AKfycbzZlEatv4mTcd_I4XpPyNupdCbHOSJirztBWvYiJ9au1az24eBnPQdvpL5bvOKk1oF-/exec"
+    sheet_url = "https://script.google.com/macros/s/AKfycbzGpVnwbzr9cigy7BQeTeY9X7MInGMHtj7G_glQ-1SXGxLxhQHAFPkVNJUZ2FhdsU22/exec"
     try:
         response = requests.get(sheet_url, params={
             "full_name": full_name,
