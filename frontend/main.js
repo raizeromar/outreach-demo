@@ -137,7 +137,8 @@ class App {
         return false
       }
     }
-    
+
+ 
     // Check radio buttons
     const radioGroups = currentStepElement.querySelectorAll('input[type="radio"][required]')
     const radioNames = [...new Set([...radioGroups].map(radio => radio.name))]
@@ -154,16 +155,40 @@ class App {
   }
 
   validateEmail(email) {
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-    return emailPattern.test(email)
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const isValidFormat = emailPattern.test(email);
+    
+    if (!isValidFormat) return false;
+    
+    // List of personal email domains to exclude
+    const personalDomains = [
+        'gmail.com',
+        'outlook.com',
+        'hotmail.com',
+        'yahoo.com',
+        'ymail.com',
+        'protonmail.com',
+        'icloud.com',
+        'mail.com',
+        'example.com',
+        'aol.com',
+        'duck.com'
+    ];
+    
+    const domain = email.split('@')[1].toLowerCase();
+    return !personalDomains.includes(domain);
   }
 
   validateURL(url) {
     try {
-      new URL(url)
-      return true
+      // Add https:// if no protocol is present
+      if (!url.match(/^https?:\/\//i)) {
+        url = 'https://' + url;
+      }
+      new URL(url);
+      return true;
     } catch {
-      return false
+      return false;
     }
   }
 
@@ -192,7 +217,20 @@ class App {
   updateProgress() {
     const progressBar = document.getElementById('progress-bar')
     const progressPercent = (this.currentStep / this.totalSteps) * 100
-    
+    const progressPercentDispaly = document.getElementById('progress-percent')
+    const progressText = document.getElementById('progress-text')
+    const currentStepDisplay = document.getElementById('current-step')
+
+     if (progressText && currentStepDisplay) {
+      currentStepDisplay.textContent = this.currentStep
+      progressText.textContent = `${this.currentStep}`
+
+    }
+
+    if (progressPercentDispaly) {
+      progressPercentDispaly.textContent = `${Math.round(progressPercent)}%`
+    }
+
     if (progressBar) {
       progressBar.style.width = `${progressPercent}%`
     }

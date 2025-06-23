@@ -21,7 +21,7 @@ export function EarlyAccess() {
             </div>
             <h1 class="text-4xl md:text-5xl font-bold text-base-content mb-4">Get Exclusive Early Access</h1>
             <p class="text-lg md:text-xl text-base-content/80 leading-relaxed mb-8 max-w-2xl mx-auto">
-              Join our VIP list to be among the first to <span class="font-semibold text-primary">10x your outbound pipeline</span> with AI-powered, hyper-personalized cold emails — no manual work required.
+              Join our VIP list to be among the first to <span class="font-semibold text-primary">10x your outbound pipeline</span> with AI-powered, personalized cold emails — no manual work required.
             </p>
             <div class="space-y-4 w-full max-w-xs">
               <button id="start-form" class="btn btn-primary btn-lg w-full text-lg transform transition-transform hover:scale-[1.02] active:scale-95">
@@ -38,7 +38,7 @@ export function EarlyAccess() {
                 <div class="h-8 w-8 rounded-full bg-primary/30 border-2 border-base-100"></div>
                 <div class="h-8 w-8 rounded-full bg-primary/40 border-2 border-base-100"></div>
               </div>
-              <p class="text-sm text-base-content/60">Join 250+ early adopters</p>
+              <p class="text-sm text-base-content/60">Join VibeReach early adopters</p>
             </div>
           </div>
 
@@ -47,7 +47,7 @@ export function EarlyAccess() {
             <!-- Progress Bar -->
             <div class="px-6 pt-6 sticky top-0 bg-base-100 z-10 border-b border-base-200">
               <div class="flex justify-between items-center mb-2">
-                <span id="progress-text" class="text-sm font-medium text-base-content/70">Step 1 of 13</span>
+                <span class="text-sm font-medium text-base-content/70">Step  <span id="progress-text">1</span> of 13</span>
                 <span id="progress-percent" class="text-sm font-medium text-primary">8%</span>
               </div>
               <div class="w-full bg-base-200 rounded-full h-2.5 mb-4">
@@ -290,7 +290,12 @@ export function EarlyAccess() {
                         <span class="label-text text-base-content/70">Your Challenge</span>
                       </label>
                       <div class="relative">
-                        <input type="text" name="challenge" class="input input-bordered w-full text-lg pl-10" placeholder="Manual cold outreach is time-consuming, lack of personalization, doesn't scale" required>
+                       <textarea 
+                          name="challenge" 
+                          class="textarea textarea-bordered w-full text-lg pl-10 min-h-[100px]" 
+                          placeholder="Manual cold outreach is time-consuming, lack of personalization, doesn't scale" 
+                          required
+                        ></textarea>
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 absolute left-3 top-3.5 text-base-content/40" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
                         </svg>
@@ -426,7 +431,7 @@ export function EarlyAccess() {
                   </a>
                 </div>
                 <div class="pt-8">
-                  <p class="text-sm text-base-content/60">In the meantime, follow us on <a href="#" class="link link-primary">LinkedIn</a> for updates.</p>
+                  <p class="text-sm text-base-content/60">In the meantime, follow us on <a href="https://linkedin.com/company/omar-gatara" class="link link-primary">LinkedIn</a> for updates.</p>
                 </div>
               </div>
             </div>
