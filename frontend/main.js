@@ -115,44 +115,57 @@ class App {
   }
 
   validateCurrentStep() {
-    const currentStepElement = document.querySelector(`.form-step[data-step="${this.currentStep}"]`)
-    const inputs = currentStepElement.querySelectorAll('input[required]')
-    
+    const currentStepElement = document.querySelector(`.form-step[data-step="${this.currentStep}"]`);
+    const inputs = currentStepElement.querySelectorAll('input[required], textarea[required]');
+
     for (let input of inputs) {
       if (!input.value.trim()) {
-        input.focus()
-        this.showError('Please fill in all required fields')
-        return false
+        input.focus();
+        this.showError('Please fill in all required fields');
+        return false;
       }
-      
+
       if (input.type === 'email' && !this.validateEmail(input.value)) {
-        input.focus()
-        this.showError('Please enter a valid email address')
-        return false
+        input.focus();
+        this.showError('Please enter a valid business email address');
+        return false;
       }
-      
-      if (input.type === 'url' && !this.validateURL(input.value)) {
-        input.focus()
-        this.showError('Please enter a valid URL')
-        return false
+
+      if (input.type === 'url') {
+        let urlValue = input.value.trim();
+
+        // Check if URL starts with http://, https://, or www.
+        if (!/^(https?:\/\/|www\.)/i.test(urlValue)) {
+            input.focus();
+            this.showError('Please enter a valid URL (should start with http://, https://, or www.)');
+            return false;
+        }
+
+        // Clean the URL by removing query parameters, fragments, and paths if needed
+        // This keeps the protocol + domain (or www. + domain)
+        const cleanedUrl = urlValue.replace(/^((https?:\/\/|www\.)[^\/?#]+).*$/i, '$1');
+        
+        // Update the input value with the cleaned URL
+        input.value = cleanedUrl.toLowerCase(); // Optional: convert to lowercase
+    }
+
+    }
+
+    // Validate required radio groups
+    const radioGroups = currentStepElement.querySelectorAll('input[type="radio"][required]');
+    const radioNames = [...new Set([...radioGroups].map(radio => radio.name))];
+
+    for (let name of radioNames) {
+      const checked = currentStepElement.querySelector(`input[name="${name}"]:checked`);
+      if (!checked) {
+        this.showError('Please select an option');
+        return false;
       }
     }
 
- 
-    // Check radio buttons
-    const radioGroups = currentStepElement.querySelectorAll('input[type="radio"][required]')
-    const radioNames = [...new Set([...radioGroups].map(radio => radio.name))]
-    
-    for (let name of radioNames) {
-      const checked = currentStepElement.querySelector(`input[name="${name}"]:checked`)
-      if (!checked) {
-        this.showError('Please select an option')
-        return false
-      }
-    }
-    
-    return true
+    return true;
   }
+
 
   validateEmail(email) {
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
