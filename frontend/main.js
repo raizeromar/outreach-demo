@@ -12,6 +12,7 @@ class App {
     this.appElement = document.querySelector('#app')
     this.currentStep = 1
     this.totalSteps = 13
+    this.setupEarlyAccessEvents()
     this.init()
   }
 
