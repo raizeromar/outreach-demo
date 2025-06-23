@@ -470,8 +470,10 @@ export function LandingPage() {
                     <p class="text-sm font-semibold text-base-content/60 mb-2 text-center">1. Provide Your Style Examples</p>
                     <div class="mockup-window border bg-neutral">
                       <div class="p-4 bg-neutral-focus text-neutral-content font-mono text-xs leading-relaxed">
-                        <p class="whitespace-pre-wrap">"Hey team, quick update on the Q3 numbers..."</p>
-                        <p class="whitespace-pre-wrap mt-2">"To whom it may concern, this letter serves as formal notification..."</p>
+                        <p class="whitespace-pre-wrap">Hey {{first_name}}, how do you do cold outreach at {{company_name}}?</p>
+                        <p class="whitespace-pre-wrap mt-2">A lot of SaaS teams either send the same templated stuff that gets ignored, or they have something great to offer but it gets buried.</p>
+                        <p class="whitespace-pre-wrap mt-2">What if every email felt like it was written just for that one lead?</p>
+                        <p class="whitespace-pre-wrap mt-2">...</p>
                       </div>
                     </div>
                   </div>
@@ -487,8 +489,15 @@ export function LandingPage() {
                     <p class="text-sm font-semibold text-secondary mb-2 text-center">2. AI Generates In Your Voice</p>
                     <div class="mockup-window border bg-neutral">
                       <div class="p-4 bg-neutral-focus text-neutral-content font-mono text-xs leading-relaxed">
-                        <p class="whitespace-pre-wrap">"Hey team, quick update on the Q3 numbers..."</p>
-                        <p class="whitespace-pre-wrap mt-2">"To whom it may concern, this letter serves as formal notification..."</p>
+                        <p class="whitespace-pre-wrap">Hi {{FirstName}},</p>
+                        <p class="whitespace-pre-wrap mt-2">Curious — how are you currently handling cold outreach at {{CompanyName}}?</p>
+                        <p class="whitespace-pre-wrap mt-2">Most software teams I speak with either:</p>
+                        <ol>
+                          <li class="whitespace-pre-wrap mt-2">1. Send the same templated stuff that gets ignored</li>
+                          <li class="whitespace-pre-wrap mt-2">2. Have something great to offer but it gets buried</li>
+                        </ol>
+                        <p class="whitespace-pre-wrap mt-2">What would it look like if every prospect you emailed felt like the message was written *just* for them?</p>
+                        <p class="whitespace-pre-wrap mt-2">...</p>
                       </div>
                     </div>
                   </div>
@@ -816,7 +825,7 @@ export function LandingPage() {
                         </div>
                         <h3 class="text-xl font-bold mb-3">CRM Integration</h3>
                         <p class="text-base-content/70">
-                            Seamlessly integrates with popular CRMs like Salesforce, HubSpot, and Pipedrive.
+                            Seamlessly integrates with popular CRMs like Salesforce, HubSpot, and Zoho.
                         </p>
                     </div>
                 </div>
@@ -930,7 +939,7 @@ export function LandingPage() {
         <!-- Footer Text -->
         <div class="text-center text-base text-lg">
           © 2025 <span class="font-semibold">GataraAI</span>, All rights reserved.
-          <a href="/contact" class="ml-2 font-medium text-orange-500 hover:underline">Contact us</a>
+          <a href="mailto:info@gatara.org" class="ml-2 font-medium text-orange-500 hover:underline">Contact us</a>
         </div>
       </footer>
 
