@@ -282,39 +282,44 @@ export function LandingPage() {
         <div class="hero">
           <div class="hero-content flex-col lg:flex-row items-center gap-12 lg:gap-20">
 
-            <!-- Visual Side: Before & After -->
+            <!-- Visual Side: Tone & Style Comparison -->
             <div class="flex-1 w-full lg:order-last">
-              <div class="bg-base-200/60 p-6 rounded-2xl shadow-lg">
+              <div class="bg-base-200/60 p-4 sm:p-6 rounded-2xl shadow-lg">
                 <div class="flex flex-col items-center gap-4">
-                  <!-- Before -->
+
+                  <!-- Step 1: User provides their style -->
                   <div class="w-full">
                     <p class="text-sm font-semibold text-base-content/60 mb-2 text-center">Generic Template</p>
-                    <div class="mockup-code bg-neutral text-neutral-content text-sm">
-                      <pre data-prefix="$"><code>Hi {first_name},</code></pre> 
-                      <pre data-prefix=">" class="text-warning"><code>I saw your company {company_name}...</code></pre> 
-                      <pre data-prefix=">" class="text-warning"><code>I think we can help.</code></pre>
+                    <div class="mockup-window border bg-neutral">
+                      <div class="p-4 bg-neutral-focus text-neutral-content font-mono text-xs leading-relaxed">
+                        <p class="whitespace-pre-wrap">Hi {first_name},</p>
+                        <p class="whitespace-pre-wrap mt-2 text-warning">I saw your company {company_name}...</p>
+                        <p class="whitespace-pre-wrap mt-2 text-warning">I think we can help.</p>
+                      </div>
                     </div>
                   </div>
-
-                  <!-- AI Processing Icon -->
+                  
+                  <!-- Processing Icon -->
                   <div class="flex flex-col items-center my-2">
                       <i class="fas fa-robot text-4xl text-primary mb-2"></i>
-                      <i class="fas fa-arrow-down text-2xl text-base-content/40"></i>
+                      <i class="fas fa-arrow-down text-2xl text-base-content/40 mt-2"></i>
                   </div>
 
-                  <!-- After -->
+                  <!-- Step 2: AI generates in that style -->
                   <div class="w-full">
                     <p class="text-sm font-semibold text-secondary mb-2 text-center">AI-Personalized & Stylized</p>
-                    <div class="mockup-code bg-neutral text-neutral-content text-sm">
-                      <pre data-prefix="$"><code>Hi Alex,</code></pre>
-                      <pre data-prefix=">" class="text-success"><code>Curious — how are you currently handling cold outreach <span class="badge badge-secondary font-bold">MediaAI</span>?</code></pre>
-                      <pre data-prefix=">" class="text-success"><code>What would it look like if every prospect you emailed felt like</code></pre>
-                      <pre data-prefix=">" class="text-success"><code>the message was written <span class="badge badge-secondary font-bold">just</span> for them?</code></pre>
+                    <div class="mockup-window border bg-neutral">
+                      <div class="p-4 bg-neutral-focus text-neutral-content font-mono text-xs leading-relaxed">
+                        <p class="whitespace-pre-wrap">Hi Alex,</p>
+                        <p class="whitespace-pre-wrap mt-2 text-success">Curious — how are you currently handling cold outreach <span class="badge badge-secondary font-bold">MediaAI</span>?</p>
+                        <p class="whitespace-pre-wrap mt-2 text-success">What would it look like if every prospect you emailed felt like the message was written <span class="badge badge-secondary font-bold">just</span> for them?</p>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+
 
             <!-- Text Side: Features & Benefits -->
             <div class="flex-1 text-center lg:text-left">
@@ -347,6 +352,9 @@ export function LandingPage() {
       <!-- =============================================== -->
       <!-- END: NEW AI PERSONALIZATION FEATURES SECTION   -->
       <!-- =============================================== -->
+
+
+
 
 
       <!-- =============================================== -->
