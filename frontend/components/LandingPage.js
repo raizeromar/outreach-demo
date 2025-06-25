@@ -124,9 +124,9 @@ export function LandingPage() {
 
       
       <!-- How It Works Section -->
-      <div id="how-it-works" class="bg-base-100 px-0 sm:px-6 py-20 pb-5">
-          <div class="container mx-auto px-6">
-              <div class="text-center mb-16">
+      <div id="how-it-works" class="bg-base-100 px-6 py-20 pb-5 px-0 sm:px-6 py-20 pb-5">
+          <div class="container mx-auto px-6 px-0 sm:px-6 py-20 pb-5">
+              <div class="text-center mb-16 px-5 sm:px-0">
                   <div class="badge badge-primary badge-outline text-lg p-3 mb-4">
                       HOW IT WORKS
                   </div>
@@ -137,7 +137,7 @@ export function LandingPage() {
               </div>
 
               <!-- Process Flow -->
-            <div class="max-w-6xl mx-auto mb-[10vh]">
+            <div class="max-w-6xl mx-auto mb-[10vh] px-5 sm:px-0">
             <div class="relative grid grid-cols-1 lg:grid-cols-3 gap-8">
                 <!-- Step 1 -->
                 <div class="flex flex-col h-full">
@@ -313,7 +313,7 @@ export function LandingPage() {
 
 
             <!-- Text Side: Features & Benefits -->
-            <div class="flex-1 text-center lg:text-left">
+            <div class="flex-1 text-center lg:text-left px-1">
               <div class="badge badge-primary badge-outline text-lg p-3 mb-4 font-semibold">
                 PERSONALIZATION
               </div>
@@ -420,7 +420,7 @@ export function LandingPage() {
             </div>
 
             <!-- Text Side: Features & Benefits (Unchanged) -->
-            <div class="flex-1 text-center lg:text-left">
+            <div class="flex-1 text-center lg:text-left px-1">
               <div class="badge badge-primary badge-outline text-lg p-3 mb-4 font-semibold">
                 PRECISION ANALYTICS
               </div>
@@ -455,7 +455,7 @@ export function LandingPage() {
       <!-- =============================================== -->
       <!-- START: NEW AUTHENTIC TONE FEATURES SECTION      -->
       <!-- =============================================== -->
-      <div class="container mx-auto px-6 py-20">
+      <div class="container mx-auto px-0 sm:px-6 py-20">
         <div class="hero">
           <div class="hero-content flex-col lg:flex-row items-center gap-12 lg:gap-20">
 
@@ -505,7 +505,7 @@ export function LandingPage() {
             </div>
 
             <!-- Text Side: Features & Benefits -->
-            <div class="flex-1 text-center lg:text-left">
+            <div class="flex-1 text-center lg:text-left px-1">
               <div class="badge badge-primary badge-outline text-lg p-3 mb-4 font-semibold">
                 AUTHENTIC MESSAGING
               </div>
@@ -540,7 +540,7 @@ export function LandingPage() {
         <!-- =============================================== -->
         <!-- START: NEW ROI ANALYTICS FEATURES SECTION (Corrected for Readability) -->
         <!-- =============================================== -->
-        <div class="container mx-auto px-6 py-20 bg-base-200">
+        <div class="container mx-auto px-0 sm:px-6 py-20 bg-base-200">
           <div class="hero">
             <div class="hero-content flex-col lg:flex-row items-center gap-12 lg:gap-20">
 
@@ -602,7 +602,7 @@ export function LandingPage() {
               </div>
 
               <!-- Text Side: Features & Benefits (Unchanged) -->
-              <div class="flex-1 text-center lg:text-left">
+              <div class="flex-1 text-center lg:text-left px-1">
                 <div class="badge badge-primary badge-outline text-lg p-3 mb-4 font-semibold">
                   MEASURABLE RESULTS
                 </div>
