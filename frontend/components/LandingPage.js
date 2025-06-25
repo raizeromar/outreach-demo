@@ -1,91 +1,94 @@
 export function LandingPage() {
   return `
     <div class="min-h-screen bg-gradient-to-br from-base-200 to-base-300">
-      <!-- Modified Sticky Navbar -->
-    <div class="navbar bg-base-100/80 backdrop-blur-sm rounded-box mx-auto mt-0 max-w-6xl shadow-lg fixed top-0 left-0 right-0 z-50">
-        <div class="navbar-start">
-            <div class="dropdown">
-                <!-- Mobile menu button -->
-                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
-                    </svg>
-                </div>
-                <!-- Mobile menu dropdown -->
-                <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow-xl">
-                    <li><a href="#how-it-works" class="text-lg">How it works</a></li>
-                    <li><a href="#features" class="text-lg">Features</a></li>
-                    <li><a class="text-lg">All About the Beta</a></li>
-                </ul>
-            </div>
-            <!-- Logo/Brand - larger text -->
-            <a class="text-3xl font-semibold pl-2 poppins gradient-text tracking-tight">
-  Vibe<span class="font-bold">Reach</span>
-</a>
-        </div>
-        
-        <!-- Centered desktop menu -->
-        <div class="navbar-center hidden lg:flex">
-            <ul class="menu menu-horizontal gap-2 px-1">
-                <li><a href="#how-it-works" class="text-lg font-medium hover:bg-base-200 rounded-btn">How it works</a></li>
-                <li><a href="#features" class="text-lg font-medium hover:bg-base-200 rounded-btn">Features</a></li>
-                <li><a class="text-lg font-medium hover:bg-base-200 rounded-btn">All About the Beta</a></li>
-            </ul>
-        </div>
-        
-        <!-- Navbar end - button positioned on far right -->
-        <div class="navbar-end">
-            <a href="#early-access" class="btn btn-primary text-lg px-6">Get Early Access</a>
-        </div>
-    </div>
-    
-    <!-- Add padding to the top of your content to account for the fixed navbar -->
-    <div class="pt-10"></div>
+      <!-- Responsive Sticky Navbar -->
+      <div class="navbar bg-base-100/90 backdrop-blur-md rounded-box ml-0 mr-2 sm:mx-4 lg:mx-auto mt-2 max-w-6xl shadow-lg fixed top-0 left-0 right-0 z-50">
+          <!-- Logo/Brand - Left side -->
+          <div class="navbar-start">
+              <a class="text-xl sm:text-2xl lg:text-3xl font-semibold poppins gradient-text tracking-tight">
+                  &nbsp;Vibe<span class="font-bold">Reach</span>
+              </a>
+          </div>
+          
+          <!-- Desktop menu - Center -->
+          <div class="navbar-center hidden lg:flex">
+              <ul class="menu menu-horizontal gap-2 px-1">
+                  <li><a href="#how-it-works" class="text-lg font-medium hover:bg-base-200 rounded-btn transition-colors">How it works</a></li>
+                  <li><a href="#features" class="text-lg font-medium hover:bg-base-200 rounded-btn transition-colors">Features</a></li>
+                  <li><a class="text-lg font-medium hover:bg-base-200 rounded-btn transition-colors">All About the Beta</a></li>
+              </ul>
+          </div>
+          
+          <!-- Right side - CTA Button + Mobile Menu -->
+          <div class="navbar-end">
+              <!-- CTA Button - hidden on very small screens, visible on sm and up -->
+              <a href="#early-access" class="btn btn-primary text-lg px-6 hidden md:inline-flex">Get Early Access</a>
+          
+              <!-- Mobile hamburger menu -->
+              <div class="dropdown dropdown-end lg:hidden">
+                  <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+                      </svg>
+                  </div>
+                  <!-- Mobile menu dropdown -->
+                  <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow-xl border border-base-300">
+                      <li><a href="#how-it-works" class="text-base font-medium py-3">How it works</a></li>
+                      <li><a href="#features" class="text-base font-medium py-3">Features</a></li>
+                      <li><a class="text-base font-medium py-3">All About the Beta</a></li>
+                      <li class="mt-2 pt-2 border-t border-base-300">
+                          <a href="#early-access" class="btn btn-primary btn-sm w-full">Get Early Access</a>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+      </div>
     
 
       <!-- Hero Section -->
       <div class="container mx-auto px-6 py-16">
           <div class="hero min-h-[85vh]">
-              <div class="hero-content flex-col lg:flex-row-reverse gap-16 max-w-7xl">
-                  <!-- Hero Image/Visual -->
-                  <div class="flex-1 flex justify-center">
-                    <img src="/hero.webp">
+              <!-- Only change flex direction on small screens -->
+              <div class="hero-content flex-col lg:flex-row-reverse gap-16 max-w-7xl pt-14 lg:pt-0">
+                  <!-- Hero Image/Visual - now comes first in DOM for mobile -->
+                  <div class="flex-1 flex justify-center order-1 lg:order-none">
+                      <img src="/hero.webp" class="w-full max-w-md lg:max-w-none">
                   </div>
 
                   <!-- Hero Text -->
-                  <div class="flex-1">
-                      <div class="badge badge-primary badge-outline text-base p-3 mb-4">
+                  <div class="flex-1 text-center lg:text-left">
+                      <div class="badge badge-primary badge-outline text-base p-3 mb-4 hidden md:inline-flex">
                           🚀 B2B OUTREACH REVOLUTION
                       </div>
                       <h1 class="text-5xl lg:text-7xl font-bold gradient-text mb-6 leading-tight">
                           Turn Cold Emails Into 
                           <span class="text-primary">Hot Leads</span>
                       </h1>
-                      <p class="text-xl text-base-content/80 mb-8 leading-relaxed max-w-2xl">
+                      <p class="text-xl text-base-content/80 mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0">
                           Engage potential leads through personalized, AI-powered cold outreach across email. Capture attention with relevant messaging tailored to each prospect's industry and needs.
                       </p>
 
                       <!-- Key Benefits -->
                       <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
-                          <div class="flex items-center gap-3">
+                          <div class="flex items-center gap-3 hidden md:inline-flex">
                               <div class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
                                   <i class="fas fa-brain text-primary"></i>
                               </div>
                               <span class="font-medium">AI-Powered Personalization</span>
                           </div>
-                          <div class="flex items-center gap-3">
+                          <div class="flex items-center gap-3 justify-center lg:justify-start">
                               <div class="w-10 h-10 bg-secondary/10 rounded-full flex items-center justify-center">
                                   <i class="fas fa-chart-line text-secondary"></i>
                               </div>
                               <span class="font-medium">3x Higher Response Rates</span>
                           </div>
-                          <div class="flex items-center gap-3">
+                          <div class="flex items-center gap-3 justify-center lg:justify-start">
                               <div class="w-10 h-10 bg-accent/10 rounded-full flex items-center justify-center">
                                   <i class="fas fa-clock text-accent"></i>
                               </div>
                               <span class="font-medium">Save 10+ Hours Weekly</span>
                           </div>
-                          <div class="flex items-center gap-3">
+                          <div class="flex items-center gap-3 hidden md:inline-flex">
                               <div class="w-10 h-10 bg-info/10 rounded-full flex items-center justify-center">
                                   <i class="fas fa-bullseye text-info"></i>
                               </div>
@@ -93,12 +96,12 @@ export function LandingPage() {
                           </div>
                       </div>
 
-                      <div class="flex flex-col sm:flex-row gap-4">
+                      <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                           <a href="#early-access" class="btn btn-primary btn-lg gap-2 hover:scale-105 transition-transform shadow-lg">
                               <i class="fas fa-rocket"></i>
                               Join Waitlist
                           </a>
-                          <a href="https://gataraai.zohobookings.com/#/ceo-call" class="btn btn-outline btn-lg gap-2">
+                          <a href="https://gataraai.zohobookings.com/#/ceo-call" class="btn btn-outline btn-lg gap-2 hidden md:inline-flex">
                               <i class="fas fa-play"></i>
                               Book Demoo
                           </a>
@@ -106,26 +109,14 @@ export function LandingPage() {
 
                       <br>
 
-                      <div class="space-y-4">
-                        <a href="#hormozi-style-headline-generator" class="btn btn-primary btn-lg gap-2 hover:scale-105 transition-transform third-hero-btn">
-                          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                          </svg>
-                          Generate Hormozi-Style Headlines
-                        </a>
+                      <div class="space-y-4 flex justify-center lg:justify-start">
+                          <a href="#hormozi-style-headline-generator" class="btn btn-primary text-lg py-4 px-6 h-auto min-h-[3.5rem] sm:min-h-0 gap-2 hover:scale-105 transition-transform third-hero-btn">
+                              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                              </svg>
+                              Generate Hormozi-Style Headlines
+                          </a>
                       </div>
-                      
-                      <!-- Social Proof 
-                      <div class="mt-8 pt-6 border-t border-base-300">
-                          <p class="text-sm text-base-content/60 mb-3">Trusted by 500+ sales teams</p>
-                          <div class="flex items-center gap-6 opacity-60">
-                              <div class="badge badge-outline">Startup Inc.</div>
-                              <div class="badge badge-outline">TechCorp</div>
-                              <div class="badge badge-outline">SalesForce Pro</div>
-                              <div class="badge badge-outline">+497 more</div>
-                          </div>
-                      </div>
-                      -->
                   </div>
               </div>
           </div>
@@ -133,7 +124,7 @@ export function LandingPage() {
 
       
       <!-- How It Works Section -->
-      <div id="how-it-works" class="bg-base-100 px-6 py-20 pb-5">
+      <div id="how-it-works" class="bg-base-100 px-0 sm:px-6 py-20 pb-5">
           <div class="container mx-auto px-6">
               <div class="text-center mb-16">
                   <div class="badge badge-primary badge-outline text-lg p-3 mb-4">
@@ -278,7 +269,7 @@ export function LandingPage() {
       <!-- =============================================== -->
       <!-- START: NEW AI PERSONALIZATION FEATURES SECTION -->
       <!-- =============================================== -->
-      <div class="container mx-auto px-6 py-20">
+      <div class="container mx-auto px-0 sm:px-6 py-20">
         <div class="hero">
           <div class="hero-content flex-col lg:flex-row items-center gap-12 lg:gap-20">
 
@@ -360,7 +351,7 @@ export function LandingPage() {
       <!-- =============================================== -->
       <!-- START: NEW LINK TRACKING FEATURES SECTION (Corrected Contrast) -->
       <!-- =============================================== -->
-      <div class="container mx-auto px-6 py-20 bg-base-200">
+      <div class="container mx-auto px-0 sm:px-6 py-20 bg-base-200">
         <div class="hero">
           <div class="hero-content flex-col lg:flex-row items-center gap-12 lg:gap-20">
 
