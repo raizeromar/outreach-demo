@@ -274,7 +274,7 @@ export function LandingPage() {
           <div class="hero-content flex-col lg:flex-row items-center gap-12 lg:gap-20">
 
             <!-- Visual Side: Tone & Style Comparison -->
-            <div class="flex-1 w-full lg:order-last">
+            <div class="flex-1 w-full lg:order-last order-1">
               <div class="bg-base-200/60 p-4 sm:p-6 rounded-2xl shadow-lg">
                 <div class="flex flex-col items-center gap-4">
 
@@ -313,7 +313,7 @@ export function LandingPage() {
 
 
             <!-- Text Side: Features & Benefits -->
-            <div class="flex-1 text-center lg:text-left px-1">
+            <div class="flex-1 text-center lg:text-left px-1 order-0">
               <div class="badge badge-primary badge-outline text-lg p-3 mb-4 font-semibold">
                 PERSONALIZATION
               </div>
@@ -356,7 +356,7 @@ export function LandingPage() {
           <div class="hero-content flex-col lg:flex-row items-center gap-12 lg:gap-20">
 
             <!-- Visual Side: Link Tracking Process -->
-            <div class="flex-1 w-full">
+            <div class="flex-1 w-full order-1 lg:order-last">
               <div class="bg-base-200/60 p-4 sm:p-6 rounded-2xl shadow-lg">
                 <div class="flex flex-col items-center gap-4">
 
@@ -420,7 +420,7 @@ export function LandingPage() {
             </div>
 
             <!-- Text Side: Features & Benefits (Unchanged) -->
-            <div class="flex-1 text-center lg:text-left px-1">
+            <div class="flex-1 text-center lg:text-left px-1 order-0">
               <div class="badge badge-primary badge-outline text-lg p-3 mb-4 font-semibold">
                 PRECISION ANALYTICS
               </div>
@@ -460,7 +460,7 @@ export function LandingPage() {
           <div class="hero-content flex-col lg:flex-row items-center gap-12 lg:gap-20">
 
             <!-- Visual Side: Tone & Style Comparison -->
-            <div class="flex-1 w-full lg:order-last">
+            <div class="flex-1 w-full lg:order-last order-1">
               <div class="bg-base-200/60 p-4 sm:p-6 rounded-2xl shadow-lg">
                 <div class="flex flex-col items-center gap-4">
 
@@ -505,7 +505,7 @@ export function LandingPage() {
             </div>
 
             <!-- Text Side: Features & Benefits -->
-            <div class="flex-1 text-center lg:text-left px-1">
+            <div class="flex-1 text-center lg:text-left px-1 order-0">
               <div class="badge badge-primary badge-outline text-lg p-3 mb-4 font-semibold">
                 AUTHENTIC MESSAGING
               </div>
@@ -545,7 +545,7 @@ export function LandingPage() {
             <div class="hero-content flex-col lg:flex-row items-center gap-12 lg:gap-20">
 
               <!-- Visual Side: The ROI Dashboard -->
-              <div class="flex-1 w-full">
+              <div class="flex-1 w-full order-1 lg:order-last">
                 <div class="bg-base-200/60 p-4 sm:p-6 rounded-2xl shadow-lg">
                   <div class="card bg-neutral text-neutral-content shadow-xl">
                     <div class="card-body p-6">
@@ -602,7 +602,7 @@ export function LandingPage() {
               </div>
 
               <!-- Text Side: Features & Benefits (Unchanged) -->
-              <div class="flex-1 text-center lg:text-left px-1">
+              <div class="flex-1 text-center lg:text-left px-1 order-0">
                 <div class="badge badge-primary badge-outline text-lg p-3 mb-4 font-semibold">
                   MEASURABLE RESULTS
                 </div>
@@ -924,7 +924,7 @@ export function LandingPage() {
         <!-- START: FOOTER SECTION                          -->
         <!-- =============================================== -->
        
-       <footer class="w-full px-4 py-6 pt-[5vh] flex flex-col items-center gap-4 text-base text-gray-600 bg-base-100">
+       <footer class="w-full px-[25px] sm:px-4 py-6 pt-[5vh] flex flex-col items-center gap-4 text-base text-gray-600 bg-base-100 pb-0 sm:pb-6">
         <!-- Social Icons -->
         <div class="flex items-center justify-center gap-6">
           <a href="https://gatara.org" target="_blank" class="hover:text-primary text-xl">
