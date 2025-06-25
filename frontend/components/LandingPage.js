@@ -124,8 +124,8 @@ export function LandingPage() {
 
       
       <!-- How It Works Section -->
-      <div id="how-it-works" class="bg-base-100 px-6 py-20 pb-5 px-0 sm:px-6 py-20 pb-5">
-          <div class="container mx-auto px-6 px-0 sm:px-6 py-20 pb-5">
+      <div id="how-it-works" class="bg-base-100 px-0 sm:px-6 py-20">
+          <div class="container mx-auto px-0 sm:px-6">
               <div class="text-center mb-16 px-5 sm:px-0">
                   <div class="badge badge-primary badge-outline text-lg p-3 mb-4">
                       HOW IT WORKS
