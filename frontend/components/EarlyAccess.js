@@ -1,7 +1,7 @@
 export function EarlyAccess() {
   return `
     <div class="min-h-screen bg-base-200">
-      <div class="container mx-auto px-6 py-8">
+      <div class="container mx-auto px-1 sm:px-6 py-8">
         <div class="mb-8">
           <a href="#landing" class="btn btn-ghost gap-2">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
